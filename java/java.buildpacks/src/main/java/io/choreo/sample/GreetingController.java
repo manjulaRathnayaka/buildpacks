@@ -1,4 +1,4 @@
-package samples.choreo.io;
+package io.choreo.sample;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

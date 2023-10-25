@@ -1,4 +1,4 @@
-package samples.choreo.io;
+package io.choreo.sample;
 
 /**
  * Hello world!

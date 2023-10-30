@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "800fec0c-8e26-4d20-b395-2ffdf5463522",
+		"name": "springbootservice - Greeting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "greeting",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https:///authorize",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "implicit",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{apiEndpoint}}/greeting?name=minim sunt incididunt",
+					"host": [
+						"{{apiEndpoint}}"
+					],
+					"path": [
+						"greeting"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "minim sunt incididunt"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: oauth2",
+								"key": "Authorization",
+								"value": "<token>"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/greeting?name=minim sunt incididunt",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"greeting"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "minim sunt incididunt"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": 49454787,\n  \"content\": \"occaecat\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://dfc3fe4d-43de-42e8-bcc2-fafabb04efd9-dev.e1-us-east-azure.preview-dv.choreoapis.dev/macz/springbootservice/greeting-5c6/v1",
+			"type": "string"
+		}
+	]
+}
